@@ -1,0 +1,97 @@
+/* let's try coding it from scratch we can try the bootstrap column function just like tic tac toe */
+
+head, header {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    background-color: #19282D;
+}
+body {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    background-color: #1f2f35;
+}
+
+header, body {
+    color: #D9414E;
+    font-family: "Montserrat", sans-serif;
+    margin: 15px 0;
+    padding: 10px;
+    text-align: center;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
+    width: 400px;
+    margin: auto;
+    border-radius: 5px; /*this gives the curve at the corners*/
+} 
+
+/* 2nd style of coding the cards*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100 vh;
+    display: flex;
+    background: blue;
+}
+
+.memory-game {
+    width: 640px;
+    height: 640px;
+    margin: auto;
+    display: flex; /*when you apply display flex, 
+    it will make each one of the items to take the same amount 
+    of space and be in a row. position from left to right. 
+    stretch across the containers height.*/
+    flex-wrap: wrap;
+    border: 2px solid lime;
+    /*you are going to add the 3D effect in the lines below*/
+    perspective: 1000px;
+
+}
+
+.memory-card {
+    width: calc(25% - 10px);
+    height: calc(33.33%-10px);
+    position: relative;
+    margin: 5px; /*this will split the cards apart*/
+    border: 2px solid aqua;
+    transform: scale(1);
+    /*you are going to add the 3D effect in the lines below*/
+    transform-style: preserve-3d;
+    transition: transform .8s;
+}
+
+.memory-card: active {
+    transform: scale(.97);
+    transition: transform .2s;
+}
+
+.memory-card.flip {
+    transform: rotateY(180deg)
+}
+
+.front-face, .back-face {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute; /*when you put absolute, 
+    it is relative to something.*/
+    border-radius: 5px;
+    border: 2px solid deeppink;
+    /* you need to write this code below. 
+    If you don't, when you flip, the back-face will still be shown. */
+    backface-visibility: hidden;
+}
+
+.front-face { 
+    /*this codes is to show the front-face when you rotate, 
+    if you don't, you will only see a blank.*/
+    transform: rotateY(180deg);
+}
