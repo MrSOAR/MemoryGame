@@ -2,52 +2,52 @@ document.addEventListener('DOMContentLoaded', () => {
     //card options
     const cardArray = [
         {
-        name: 'Aatrox-1',
-        img: 'images/Aatrox-1.png'
+        name: 'ahri-1',
+        img: 'images/front_cards/ahri-1.jpg'
         },
         {
-        name: 'Ahri-2',
-        img: 'images/Ahri-2.png'
+        name: 'akali-2',
+        img: 'images/front_cards/akali-2.jpg'
         },
         {
-        name: 'Akali-3',
-        img: 'images/Akali-3.png'
+        name: 'alistar-3',
+        img: 'images/front_cards/alistar-3.jpg'
         },
         {
-        name: 'Alistar-4',
-        img: 'images/Alistar-4.png'
+        name: 'amumu-4',
+        img: 'images/front_cards/amumu-4.jpg'
         },
         {
-        name: 'Amumu-5',
-        img: 'images/Amumu-5.png'
+        name: 'anivia-5',
+        img: 'images/front_cards/anivia-5.jpg'
         },
         {
-        name: 'Anivia-6',
-        img: 'images/Anivia-6.png'
+        name: 'aurelionSol-6',
+        img: 'images/front_cards/aurelionSol-6.jpg'
         },
         {
-        name: 'Aatrox-1',
-        img: 'images/Aatrox-1.png'
+        name: 'ahri-1',
+        img: 'images/front_cards/ahri-1.jpg'
         },
         {
-        name: 'Ahri-2',
-        img: 'images/Ahri-2.png'
+        name: 'akali-2',
+        img: 'images/front_cards/akali-2.jpg'
         },
         {
-        name: 'Akali-3',
-        img: 'images/Akali-3.png'
+        name: 'alistar-3',
+        img: 'images/front_cards/alistar-3.jpg'
         },
         {
-        name: 'Alistar-4',
-        img: 'images/Alistar-4.png'
+        name: 'amumu-4',
+        img: 'images/front_cards/amumu-4.jpg'
         },
         {
-            name: 'Amumu-5',
-            img: 'images/Amumu-5.png'
+            name: 'anivia-5',
+            img: 'images/front_cards/anivia-5.jpg'
             },
         {
-        name: 'Anivia-6',
-        img: 'images/Anivia-6.png'
+        name: 'aurelionSol-6',
+        img: 'images/front_cards/aurelionSol-6.jpg'
         },
     ]
 
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (optionOneId === optionTwoId) {
             cards[optionOneId].setAttribute('src', 'images/blank.png')
             cards[optionOneId].setAttribute('src', 'images/blank.png')
-            alert('You have clicked the same image before!')
+            // alert('You have clicked the same image before!')
         } 
         else if (cardsChosen[0] === cardsChosen[1]) {
             cards[optionOneId].setAttribute('src', 'images/blank.png')
@@ -114,6 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     createBoard()
+    console.log("it is connected")
 
 })
 
@@ -131,8 +132,3 @@ function countDown() {
         timeLeft -=1
     }, 1000)
 }
-
-//Carousel. 
-//I do not know if I should put it inside or outside of the event listener.
-$('.carousel').carousel()
-

@@ -1,0 +1,25 @@
+/* .grid {
+    display: inline-block;
+    flex-wrap: wrap;
+    height: 200px;
+    width: 100px;
+    margin: 10px;
+}  */
+
+.game-board {
+    box-sizing: border-box;
+}
+
+.grid {
+    display: flex;
+    flex-flow: row wrap;
+    width: auto;
+    height: auto;
+}
+
+img {
+    height: auto;
+    width: auto;
+    margin: 10px;
+    border-radius: 10px;
+}

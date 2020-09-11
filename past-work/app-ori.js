@@ -21,16 +21,18 @@ function flipCard() {
         //this is the first time the player has clicked the card
         hasFlippedCard =  true;
         firstCard = this;
-        console.log({hasFlippedCard, firstCard});
-    } else {
+        // console.log({hasFlippedCard, firstCard});
+    } return;/*else {
         //this is the second time that the card ahs been clicked
-        hasFlippedCard = false;
+        // hasFlippedCard = false;
         secondCard = this;
         checkForMatch()
-    }
+    }*/
+    secondCard = this;
 }
 
 function checkForMatch() {
+    let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
     //do cards match?
     // console.log(firstCard.dataset.framework);
     // console.log(secondCard.dataset.framework);
@@ -61,21 +63,21 @@ function unflipCards() {
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
 
-        lockBoard = false; /*to prevent from you unflipping the next card 
-        before the previous unmatched pair flips back. */
+        // lockBoard = false; /*to prevent from you unflipping the next card 
+        //before the previous unmatched pair flips back. */
 
         resetBoard()
-    }), 1500);
+    }, 1500);
 }
 
 function resetBoard() { //after each pair of flip, you will reset the function
-    [hasFlippedCard, lockBoard] = [false, false]
-    [firstCard, secondCard] = [null, null] //??
+    [hasFlippedCard, lockBoard] = [false, false];
+    [firstCard, secondCard] = [null, null]; //??
 }
 
 (function shuffle() {
-    cards.forEach(card +> {
-        let randomPos = Math.floor(Math.random() * 12)
+    cards.forEach(card => {
+        let randomPos = Math.floor(Math.random() * 12);
         card.style.order = randomPos;
     })
 })(); /*What you are doing here is called IIFE 
