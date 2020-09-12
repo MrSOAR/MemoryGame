@@ -7,8 +7,51 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="styleF.css">
     <title>Justice League Memories</title>
+    <header>
+        <div class="turn-count">
+            <div class="greenScore">
+                <h1 id="score">
+                Move Count:
+                <div id="count"></div>
+                </h1>
+            </div>
+               
+            <div class="redReset">
+                <br>
+                <h1 id="reset">
+                    <a href=>Reset</a>
+                </h1>
+            </div>
+            
+    
+            <div class="hide">
+                <h1 id="game-over">
+                    Congratulations,
+                    <br>you have completed
+                    <br>the game!
+                    <a href=>Play again!</a>
+                </h1>
+                <h1>
+                    <p id="congratulations"></p>
+                </h1>
+            </div>
+        </div>
+    </header>
   </head>
+  
   <body>
+    <div class="overlay">
+        <section class="press-btn">
+            <button type="button" id="startBtn" onclick="initialize()" href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Play Now!
+            </button>
+        </section>
+    </div>
+        
     <section class="memory-game">
         <div class="memory-card" data-framework="batman">
             <img class="front-face" src="img/1-batman.svg" alt="Batman"/>
@@ -70,6 +113,10 @@
             <img class="back-face" src="img/jl-back.svg" alt="JL"/>
         </div>
 
+    </section>
+
+    <section>
+        
     </section>
 
     <script src="appF.js"></script>
