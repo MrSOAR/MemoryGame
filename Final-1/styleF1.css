@@ -1,0 +1,186 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* height: 200vh; */
+    /* display: flex; */
+    background: black;
+    margin: auto;
+    color: blue;
+    font-family: 'Montserrat', sans-serif;;   
+}
+/*Intro video*/
+.intro-wrapper {
+    display: block;
+    width: 100%;
+    height: 50%;
+    margin: 0 auto;
+}
+
+/* Play Now button */
+/* .press-btn {
+    position: absolute;
+    top: 1000;
+    bottom: 100; will have to play with the top and bottom to allow the movement of the button
+    left: 0;
+    right:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.gameboard-wrapper {
+    position: relative;
+}
+
+.play-btn {
+    position: absolute;
+    text-align: center;
+    z-index: 1;
+    left: 0;
+    top: calc(50% - 50px);
+    width: 100%;
+    /* display: flex;
+    flex-wrap: wrap;
+    justify: center; */
+
+}
+
+#startBtn {
+    /* position: absolute; */
+    /* top: 100px; */
+    /* left: 250px; */
+    width: 400px;
+    height: 50px;
+    font-size: 20px;
+    background-color: white;
+    z-index: 1;
+}
+
+/* neon-effect Button */
+#startBtn {
+    padding: 0;
+    color: #2196f3;
+    background: #031321;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 20px;
+    overflow: hidden;
+    transition: 0.2s;
+    border-radius: 30px;
+}
+
+#startBtn:hover {
+    color: #255784;
+    background: #2196f3;
+    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+    transition-delay: 0.01s;
+}
+
+/* End of start button */
+.gameboard-wrapper {
+    background: rgba(7, 7, 7, 0.726);
+    padding-bottom: 20px;
+}
+
+.memory-game {
+    width: 640px;
+    height: 640px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+    /* z-index: -10; */
+}
+
+.memory-card {
+    width: calc(25% - 10px); /*adjust the width and height so that you will fill more of the screen.*/
+    height: calc(33.33%-10px);
+    margin: 5px;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+}
+
+
+.memory-card:active {
+    transform: scale(0.97);
+    transition: transform .2s;
+}
+
+.memory-card.flip {
+    transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    border-radius: 5px;
+    background: #ffffff;
+    backface-visibility: hidden;
+}
+
+.front-face {
+    transform: rotateY(180deg);
+}   
+
+
+/* Start of Move Count */
+
+.turn-count {
+    position: relative;
+    color: #39ff14;
+}
+
+#greenScore {
+    position: absolute;
+    text-align: left;
+    left: 0;
+    top: calc(50% - 10px);
+    width: 100%;
+}
+
+#greenScore {
+    position: relative;
+    color: #39ff14;
+}
+
+/*reset button*/
+a {
+    color: red;
+}
+.a,
+.redReset {
+    position: relative;
+    color: red;
+}
+
+#reset {
+    position: absolute;
+    text-align: justify;
+    right: 0;
+    top: 100px;
+    width: 100%;
+    color: red;
+}
+
+/*hiding*/
+.hide {
+    display: none;
+}
+
+/*game-over display*/
+#game-over {
+    color: red;
+    display: flex;
+    justify-content: center;
+}

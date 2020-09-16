@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="styleF1.css">
+
+    <!--Title of the web tag-->
+    <title>Justice League Memories F1</title>
+
+    <!--navigation bar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            <img src="img/bang.png" width="80" height="50" alt="" loading="lazy">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Heroes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Villains</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Who do you fight for?">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+          </div>
+      </nav>
+  </head>
+
+  <body>
+    <!--Insert intro video-->
+    <div class="intro-wrapper">
+        <video id="intro-video" class="d-block w-100" poster="img/still-img.jpg" preload="metadata" autoplay loop controls>
+            <source src="vid/jl-sound.webm" type="video/webm">
+            <source src="vid/jl.mp4" type="video/mp4">
+        </video>
+      </div>
+    
+    
+      <div class="container">
+        <div class="row">
+          <div class="col-2">
+            <!-- One of three columns -->
+            <!--Move Count-->
+            <img src="img/whyjoker.jpg" class="img-fluid" alt="Responsive image">
+                <div class="move-count-wrapper">
+                    <div class="turn-count">
+                        <div class="greenScore">
+                            <h1 id="score">
+                            Move Count:
+                            <h1 id="count"></h1>
+                            </h1>
+                        </div>
+                        
+                        <div class="hide">
+                            <h3>
+                                <p id="congratulations"></p>
+                            </h3>
+                            <h3 id="game-over">
+                                <a href=>Play again!</a>
+                            </h3>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                
+          </div>
+          <div class="col-8">
+            <!-- One of three columns -->
+                    <!--Memory Game-->
+            <div class="gameboard-wrapper">
+                <!--Play now button-->
+                <section class="play-btn">
+                    <div class="container">
+                        <div class="overlay">
+                            <section class="press-btn">
+                                <button type="button" id="startBtn" onclick="initialize()" href="#">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    Play Now!
+                                </button>
+                            </section>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="memory-game">
+                    <div class="memory-card" data-framework="batman">
+                        <img class="front-face" src="img/1-batman.svg" alt="Batman"/>
+                        <img class="back-face" src="img/jl-back.svg" alt="JL"/>
+                    </div>
+            
+                    <div class="memory-card" data-framework="batman">
+                        <img class="front-face" src="img/1-batman.svg" alt="Batman"/>
+                        <img class="back-face" src="img/jl-back.svg" alt="JL"/>
+                    </div>
+            
+                    <div class="memory-card" data-framework="flash">
+                        <img class="front-face" src="img/2-flash.svg" alt="Flash"/>
+                        <img class="back-face" src="img/jl-back.svg" alt="JL"/>
+                    </div>
+            
+                    <div class="memory-card" data-framework="flash">
+                        <img class="front-face" src="img/2-flash.svg" alt="Flash"/>
+                        <img class="back-face" src="img/jl-back.svg" alt="JL"/>
+                    </div>
+            
+                    <div class="memory-card" data-framework="greenLantern">
+                        <img class="front-face" src="img/3-greenL.svg" alt="Green Latern"/>
+                        <img class="back-face" src="img/jl-back.svg" alt="JL"/>
+                    </div>
+            
+                    <div class="memory-card" data-framework="greenLantern">
+                        <img class="front-face" src="img/3-greenL.svg" alt="Green Latern"/>
+                        <img class="back-face" src="img/jl-back.svg" alt="JL"/>
+                    </div>
+            
+                    <div class="memory-card" data-framework="joker">
+                        <img class="front-face" src="img/4-joker.svg" alt="Joker"/>
+                        <img class="back-face" src="img/jl-back.svg" alt="JL"/>
+                    </div>
+            
+                    <div class="memory-card" data-framework="joker">
+                        <img class="front-face" src="img/4-joker.svg" alt="Joker"/>
+                        <img class="back-face" src="img/jl-back.svg" alt="JL"/>
+                    </div>
+            
+                    <div class="memory-card" data-framework="superman">
+                        <img class="front-face" src="img/5-superman.svg" alt="Superman"/>
+                        <img class="back-face" src="img/jl-back.svg" alt="JL"/>
+                    </div>
+            
+                    <div class="memory-card" data-framework="superman">
+                        <img class="front-face" src="img/5-superman.svg" alt="Superman"/>
+                        <img class="back-face" src="img/jl-back.svg" alt="JL"/>
+                    </div>
+            
+                    <div class="memory-card" data-framework="wonderWoman">
+                        <img class="front-face" src="img/6-wonder-woman.svg" alt="WonderWoman"/>
+                        <img class="back-face" src="img/jl-back.svg" alt="JL"/>
+                    </div>
+            
+                    <div class="memory-card" data-framework="wonderWoman">
+                        <img class="front-face" src="img/6-wonder-woman.svg" alt="WonderWoman"/>
+                        <img class="back-face" src="img/jl-back.svg" alt="JL"/>
+                    </div>
+            
+                </section>
+            </div>
+                </div>
+          <div class="col-2">
+            <!-- One of three columns -->
+                <img src="img/j1.jpeg" class="img-fluid" alt="Responsive image">
+                <!--Reset Button-->
+                <div class="container-reset-wrapper">
+                    <div class="redReset">
+                        <h1 id="reset">
+                            <a href=>Loser! Give up <br>& <br>reset!</a>
+                        </h1>
+                    </div>
+                </div>
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="appF1.js"></script>
+  </body>
+</html>
